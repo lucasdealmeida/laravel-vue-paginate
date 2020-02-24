@@ -1965,6 +1965,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     search: function search(e) {
       this.load(e.target.action + "?" + $(e.target).serialize());
+    },
+    submit: function submit() {
+      $('form').submit();
     }
   }
 });
@@ -49591,7 +49594,8 @@ Vue.component('paginate', __webpack_require__(/*! ./components/paginate */ "./re
  */
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  methods: {}
 });
 
 /***/ }),
@@ -49792,8 +49796,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/html/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /var/www/html/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/r2luna/code/playtime/partials/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/r2luna/code/playtime/partials/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

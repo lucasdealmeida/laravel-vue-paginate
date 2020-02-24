@@ -28,7 +28,7 @@
                     Users
                 </div>
                 <div class="card-body">
-                    <paginate template='@include('partial')'></paginate>
+                    <paginate template='@include('users.partial')'></paginate>
                 </div>
             </div>
         </div>

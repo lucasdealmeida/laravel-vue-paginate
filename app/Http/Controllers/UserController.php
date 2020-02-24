@@ -23,9 +23,9 @@ class UserController extends Controller
             ->appends($request->only(['search', 'sortBy', 'direction']));
 
         if ($request->ajax()) {
-            return view('partial', compact('users'));
+            return view('users.partial', compact('users'));
         }
 
-        return view('users', compact('users'));
+        return view('users.index', compact('users'));
     }
 }

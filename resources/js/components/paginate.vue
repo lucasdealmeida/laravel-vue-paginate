@@ -23,6 +23,9 @@
             },
             search(e){
                 this.load(e.target.action + "?" + $(e.target).serialize());
+            },
+            submit() {
+                $('form').submit();
             }
         }
     }
