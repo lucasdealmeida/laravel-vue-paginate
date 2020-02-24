@@ -1,3 +1,5 @@
 <?php
 
-Route::get('/', 'User')->name('users');
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', 'UserController')->name('users');

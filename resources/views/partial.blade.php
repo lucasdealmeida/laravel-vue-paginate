@@ -13,40 +13,10 @@
         <thead>
         <tr>
             <th>
-                @if (request('sortBy') != 'name')
-                    <a href="javascript:;" v-on:click.prevent="$emit(`change`, `{{ request()->fullUrlWithQuery(['sortBy' => 'name', 'direction' => 'asc']) }}`)">
-                        <i class="fas fa-sort"></i>
-                        Name
-                    </a>
-                @elseif (request('direction') == 'asc')
-                    <a href="javascript:;" v-on:click.prevent="$emit(`change`, `{{ request()->fullUrlWithQuery(['sortBy' => 'name', 'direction' => 'desc']) }}`)">
-                        <i class="fas fa-sort-up"></i>
-                        Name
-                    </a>
-                @else
-                    <a href="javascript:;" v-on:click.prevent="$emit(`change`, `{{ request()->fullUrlWithQuery(['sortBy' => 'name', 'direction' => 'asc']) }}`)">
-                        <i class="fas fa-sort-down"></i>
-                        Name
-                    </a>
-                @endif
+                @include('components.ordered-header', ['title'=>'Name', 'field'=>'name'])
             </th>
             <th>
-                @if (request('sortBy') != 'email')
-                    <a href="javascript:;" v-on:click.prevent="$emit(`change`, `{{ request()->fullUrlWithQuery(['sortBy' => 'email', 'direction' => 'asc']) }}`)">
-                        <i class="fas fa-sort"></i>
-                        Email
-                    </a>
-                @elseif (request('direction') == 'asc')
-                    <a href="javascript:;" v-on:click.prevent="$emit(`change`, `{{ request()->fullUrlWithQuery(['sortBy' => 'email', 'direction' => 'desc']) }}`)">
-                        <i class="fas fa-sort-up"></i>
-                        Email
-                    </a>
-                @else
-                    <a href="javascript:;" v-on:click.prevent="$emit(`change`, `{{ request()->fullUrlWithQuery(['sortBy' => 'email', 'direction' => 'asc']) }}`)">
-                        <i class="fas fa-sort-down"></i>
-                        Email
-                    </a>
-                @endif
+                @include('components.ordered-header', ['title'=>'Email', 'field'=>'email'])
             </th>
         </tr>
         </thead>
