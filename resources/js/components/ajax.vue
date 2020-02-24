@@ -7,8 +7,8 @@
 </template>
 <script>
     export default {
-        props: ['template'],
-        data: function(){
+        props  : ['template'],
+        data   : function () {
             return {
                 templateData: this.template
             }
@@ -21,11 +21,8 @@
                     self.templateData = response.data;
                 })
             },
-            search(e){
+            search(e) {
                 this.load(e.target.action + "?" + $(e.target).serialize());
-            },
-            submit() {
-                $('form').submit();
             }
         }
     }
