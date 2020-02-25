@@ -9,16 +9,28 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine-ie11.js" defer></script>
+
 </head>
 <body>
+
 <div id="app">
     <main class="py-4 mb-2">
         <div class="container">
             <div class="card">
                 <div class="card-header">
                     Users
+                    <a href="{{ url('teste') }}">Teste</a>
                 </div>
+
+
+
                 <div class="card-body">
+
+{{--                    <div>--}}
+{{--                        <ajax template="@include('users.select_box')"></ajax>--}}
+{{--                    </div>--}}
+
                     <ajax template='@include('users.partial')'></ajax>
                 </div>
             </div>

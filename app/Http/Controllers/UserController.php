@@ -23,7 +23,7 @@ class UserController extends Controller
             ->appends($request->only(['search', 'sortBy', 'direction']));
 
         if ($request->ajax()) {
-            return view('users.partial', compact('users'));
+            return $this->noCacheView('users.partial', compact('users'));
         }
 
         return view('users.index', compact('users'));

@@ -5,7 +5,10 @@
         v-on:search="search">
     </component>
 </template>
+
 <script>
+    import axios from 'axios';
+
     export default {
         props  : ['template'],
         data   : function () {
@@ -15,9 +18,9 @@
         },
         methods: {
             load(url) {
-                var self = this;
+                let self = this;
                 axios.get(url).then(response => {
-                    history.pushState({}, null, url);
+                    window.history.pushState({}, url, url);
                     self.templateData = response.data;
                 })
             },

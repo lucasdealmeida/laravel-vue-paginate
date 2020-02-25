@@ -18,6 +18,8 @@
             <th>
                 @include('components.ordered-header', ['title'=>'Email', 'field'=>'email'])
             </th>
+            <th>Created At</th>
+            <th>Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -25,6 +27,8 @@
             <tr>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
+                <td>{{ $user->created_at->diffForHumans() }}</td>
+                <td><a href="/users/edit/1">Edit</a></td>
             </tr>
         @endforeach
         </tbody>
